@@ -1,75 +1,113 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TransportZona</title>
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
-    <!-- Font Awesome za ikonice (hamburger meni) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
-    <!-- Glavni CSS -->
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TransportZona – poslovna mreža za transportne i servisne usluge u Srbiji i regionu.">
+  <meta name="keywords" content="transport, šlep, auto servis, Srbija, prevoz, smeštaj, selidbe, region">
+  <meta name="author" content="TransportZona">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="TransportZona" />
+  <meta property="og:description" content="Sve transportne i servisne usluge na jednom mestu – bez provizije." />
+  <meta property="og:image" content="logo.jpg" />
+  <meta property="og:url" content="https://transportzonalogistic.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>TransportZona</title>
+
+  <!-- Fontovi i ikonice -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
-    <!-- Navigacija -->
+  <!-- Navigacija -->
+  <header class="header">
     <nav class="navbar">
-        <a href="#home"><img src="logo.jpg" alt="TransportZona Logo" class="logo" /></a>
-        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <ul class="nav-links">
-            <li><a href="#home">Početna</a></li>
-            <li><a href="#about">O nama</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-            <li><a href="#prijava">Prijava</a></li>
-        </ul>
+      <a href="#home" class="logo"><img src="logo.jpg" alt="TransportZona" /></a>
+      <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#home">Početna</a></li>
+        <li><a href="#about">O nama</a></li>
+        <li><a href="#services">Usluge</a></li>
+        <li><a href="#testimonials">Iskustva</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#prijava" class="prijava-dugme">Prijava</a></li>
+      </ul>
     </nav>
 
-    <!-- Naslovna (Cover) sekcija sa parallax efektom -->
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1>Dobrodošli u TransportZona</h1>
-            <p>Najbrža veza između prevoznika i teretnih kompanija.</p>
-        </div>
-    </header>
-
-    <!-- O nama sekcija -->
-    <section id="about">
-        <div class="container">
-            <h2>O nama</h2>
-            <p>TransportZona je inovativna online platforma koja povezuje vozače kamiona sa kompanijama koje imaju teret za prevoz. Naš cilj je da optimizujemo logistiku i smanjimo prazne prevoze, olakšavajući saradnju između prevoznika i klijenata širom sveta.</p>
-            <p>Naš tim se sastoji od iskusnih stručnjaka za transport i tehnologiju, posvećenih kreiranju efikasnog i pouzdanog ekosistema za sve učesnike u industriji prevoza. Koristimo najnovije tehnološke inovacije kako bismo unapredili proces registracije, praćenja pošiljki i komunikacije između partnera.</p>
-        </div>
+    <!-- Hero sekcija -->
+    <section class="hero" id="home">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1><span class="typewriter"></span></h1>
+        <p>Povezujemo prevoznike, servise i putnike bez posrednika.</p>
+        <a href="#prijava" class="btn-main">Postani član</a>
+      </div>
     </section>
+  </header>
 
-    <!-- Kontakt sekcija -->
-    <section id="contact">
-        <div class="container">
-            <h2>Kontakt</h2>
-            <p>Ako imate pitanja ili vam je potrebna dodatna pomoć, slobodno nas kontaktirajte popunjavajući formu ispod.</p>
-            <form action="#" class="contact-form">
-                <input type="text" name="name" placeholder="Vaše ime" required />
-                <input type="email" name="email" placeholder="Vaš email" required />
-                <textarea name="message" placeholder="Vaša poruka" rows="4" required></textarea>
-                <button type="submit" class="btn-primary">Pošalji poruku</button>
-            </form>
-            <p>Želite da se odmah prijavite? Kliknite na dugme ispod.</p>
-            <a href="https://forms.gle/Nv68jxMNj5VK32n78" target="_blank" class="btn-secondary">Prijavite se ovde</a>
-        </div>
-    </section>
+  <!-- O nama -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2>O nama</h2>
+      <p>TransportZona je mreža svih vrsta transportnih i servisnih usluga na teritoriji Srbije i regiona. Omogućavamo direktnu komunikaciju između korisnika i pružalaca usluga, bez provizije. Radimo 24/7 i pokrivamo sve ključne tačke regiona.</p>
+    </div>
+  </section>
 
-    <!-- Prijava sekcija -->
-    <section id="prijava" class="prijava-section">
-        <div class="container">
-            <h2>Pridružite nam se</h2>
-            <p>Postanite deo TransportZone i povežite se sa hiljadama prevoznika širom zemlje. Registracija je brza i jednostavna.</p>
-            <a href="https://forms.gle/Nv68jxMNj5VK32n78" target="_blank" class="btn-primary">Prijavite se</a>
-        </div>
-    </section>
+  <!-- Usluge -->
+  <section class="section gray-bg" id="services">
+    <div class="container">
+      <h2>Naše usluge</h2>
+      <div class="services-grid">
+        <div class="service-card"><i class="fas fa-truck"></i><h3>Transport</h3><p>Selidbe, prevoz robe i materijala.</p></div>
+        <div class="service-card"><i class="fas fa-car-crash"></i><h3>Šlep služba</h3><p>Dostupna 24/7 u celoj Srbiji.</p></div>
+        <div class="service-card"><i class="fas fa-tools"></i><h3>Auto-servis</h3><p>Mehaničari, limari, električari i mobilni servisi.</p></div>
+        <div class="service-card"><i class="fas fa-bed"></i><h3>Smeštaj</h3><p>Za vozače i putnike na ključnim tačkama.</p></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skripte za biblioteke i funkcionalnost -->
-    <!-- ScrollReveal za animacije pri skrolovanju -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- Glavni JS fajl -->
-    <script src="script.js"></script>
+  <!-- Iskustva korisnika -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h2>Iskustva korisnika</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial"><p>“Brzo, jednostavno, bez komplikacija. Prava stvar!”</p><h4>- Marko, Beograd</h4></div>
+        <div class="testimonial"><p>“Uspeli smo da pronađemo pouzdan prevoz za selidbu u 2h.”</p><h4>- Jelena, Novi Sad</h4></div>
+        <div class="testimonial"><p>“Kao šlep služba, konačno imamo redovne klijente.”</p><h4>- Milan, Niš</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section class="section gray-bg" id="contact">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p>Ako imate pitanja ili vam je potrebna pomoć, kliknite na link ispod da popunite Google formu.</p>
+      <a href="https://forms.gle/Nv68jxMNj5VK32n78" target="_blank" class="btn-main">Kontakt forma</a>
+    </div>
+  </section>
+
+  <!-- Prijava -->
+  <section class="section" id="prijava">
+    <div class="container">
+      <h2>Pridruži se TransportZoni</h2>
+      <p>Članarina već od 3.000 RSD mesečno, bez provizije i posrednika.</p>
+      <a href="https://forms.gle/Nv68jxMNj5VK32n78" target="_blank" class="btn-main">Prijavi se</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 TransportZona. Sva prava zadržana.</p>
+  </footer>
+
+  <!-- JS fajlovi -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
 </body>
 </html>

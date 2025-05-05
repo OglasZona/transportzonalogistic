@@ -1,221 +1,200 @@
-/* Glavni CSS za TransportZona sajt */
-
-/* Globalni stilovi */
+/* Reset & Osnove */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
     font-family: 'Roboto', sans-serif;
-}
-
-body {
     background-color: #fff;
-    color: #222;
+    color: #111;
     line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Navigacija */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8); /* 80% providnosti */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  /* Navigacija */
+  .header {
+    position: relative;
+  }
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
-}
-
-.logo {
-    height: 50px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #e60000; /* crveni hover efekat */
-}
-
-/* Mobile menu toggle (hamburger) */
-.menu-toggle {
+    padding: 20px 5%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  .navbar img {
+    height: 40px;
+  }
+  .menu-toggle {
     display: none;
-    background: none;
-    border: none;
     font-size: 28px;
-    color: #fff;
+    color: white;
     cursor: pointer;
-}
-
-/* Hero / cover sekcija */
-.hero {
-    background: url('kamion-zona.jpg') no-repeat center center fixed;
-    background-size: cover;
+  }
+  .nav-list {
+    display: flex;
+    gap: 30px;
+  }
+  .nav-list li a {
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .nav-list li a:hover,
+  .nav-list .prijava-dugme {
+    color: #e60000;
+    font-weight: bold;
+  }
+  
+  /* Hero sekcija */
+  .hero {
     height: 100vh;
+    background: url('kamion-zona.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
-}
-
-.hero::before {
-    content: "";
+  }
+  .hero .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* tamniji sloj preko slike */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 3em;
-    animation: fadeInDown 2s ease-out;
-}
-
-.hero p {
-    font-size: 1.3em;
-    margin-top: 10px;
-    animation: fadeInUp 2s ease-out;
-}
-
-/* Sekcije: O nama, Kontakt, Prijava */
-section {
-    padding: 80px 20px;
-}
-
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#about {
-    background: #fff;
-}
-
-#contact {
-    background: #f9f9f9;
-}
-
-#prijava {
-    background: #fff;
-}
-
-/* Forme i dugmad */
-.contact-form input, .contact-form textarea {
+    top: 0; left: 0;
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-.contact-form button, .btn-primary {
-    background: #e60000;
-    color: #fff;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+  }
+  .hero-text {
+    position: relative;
+    color: white;
+    z-index: 1;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  .btn-main {
+    background-color: #e60000;
+    color: white;
+    padding: 12px 25px;
     border: none;
-    padding: 12px 24px;
     border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-primary:hover {
-    background: #c50000;
-}
-
-.btn-secondary {
-    display: inline-block;
-    margin-top: 15px;
-    background: #222;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.btn-secondary:hover {
-    background: #000;
-}
-
-/* Keyframe animacije */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsivni stilovi */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: rgba(0,0,0,0.9);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        text-align: right;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .nav-links li {
-        margin: 10px 0;
-    }
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .btn-main:hover {
+    background-color: #ff1a1a;
+  }
+  
+  /* Sekcije */
+  .section {
+    padding: 80px 5%;
+  }
+  .gray-bg {
+    background-color: #f8f8f8;
+  }
+  .section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Usluge */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .service-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card i {
+    font-size: 2.5rem;
+    color: #e60000;
+    margin-bottom: 10px;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Testimonials */
+  .testimonial-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .testimonial {
+    background-color: #f4f4f4;
+    padding: 25px;
+    border-radius: 8px;
+    font-style: italic;
+  }
+  .testimonial h4 {
+    margin-top: 10px;
+    text-align: right;
+    font-weight: 500;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 5%;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsivnost */
+  @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+      display: block;
     }
-    .hero h1 {
-        font-size: 2.5em;
+    .nav-list {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.95);
+      width: 200px;
+      height: 100vh;
+      transform: translateX(100%);
+      transition: 0.4s ease-in-out;
     }
-    .container {
-        width: 90%;
+    .nav-list.active {
+      transform: translateX(0);
     }
-}
+    .nav-list li {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .hero-text h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
