@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TransportZona</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome za ikonice (hamburger meni) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <!-- Glavni CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navigacija -->
+    <nav class="navbar">
+        <a href="#home"><img src="logo.jpg" alt="TransportZona Logo" class="logo" /></a>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="#home">Početna</a></li>
+            <li><a href="#about">O nama</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#prijava">Prijava</a></li>
+        </ul>
+    </nav>
+
+    <!-- Naslovna (Cover) sekcija sa parallax efektom -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Dobrodošli u TransportZona</h1>
+            <p>Najbrža veza između prevoznika i teretnih kompanija.</p>
+        </div>
+    </header>
+
+    <!-- O nama sekcija -->
+    <section id="about">
+        <div class="container">
+            <h2>O nama</h2>
+            <p>TransportZona je inovativna online platforma koja povezuje vozače kamiona sa kompanijama koje imaju teret za prevoz. Naš cilj je da optimizujemo logistiku i smanjimo prazne prevoze, olakšavajući saradnju između prevoznika i klijenata širom sveta.</p>
+            <p>Naš tim se sastoji od iskusnih stručnjaka za transport i tehnologiju, posvećenih kreiranju efikasnog i pouzdanog ekosistema za sve učesnike u industriji prevoza. Koristimo najnovije tehnološke inovacije kako bismo unapredili proces registracije, praćenja pošiljki i komunikacije između partnera.</p>
+        </div>
+    </section>
+
+    <!-- Kontakt sekcija -->
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>Ako imate pitanja ili vam je potrebna dodatna pomoć, slobodno nas kontaktirajte popunjavajući formu ispod.</p>
+            <form action="#" class="contact-form">
+                <input type="text" name="name" placeholder="Vaše ime" required />
+                <input type="email" name="email" placeholder="Vaš email" required />
+                <textarea name="message" placeholder="Vaša poruka" rows="4" required></textarea>
+                <button type="submit" class="btn-primary">Pošalji poruku</button>
+            </form>
+            <p>Želite da se odmah prijavite? Kliknite na dugme ispod.</p>
+            <a href="https://forms.gle/Nv68jxMNj5VK32n78" target="_blank" class="btn-secondary">Prijavite se ovde</a>
+        </div>
+    </section>
+
+    <!-- Prijava sekcija -->
+    <section id="prijava" class="prijava-section">
+        <div class="container">
+            <h2>Pridružite nam se</h2>
+            <p>Postanite deo TransportZone i povežite se sa hiljadama prevoznika širom zemlje. Registracija je brza i jednostavna.</p>
+            <a href="https://forms.gle/Nv68jxMNj5VK32n78" target="_blank" class="btn-primary">Prijavite se</a>
+        </div>
+    </section>
+
+    <!-- Skripte za biblioteke i funkcionalnost -->
+    <!-- ScrollReveal za animacije pri skrolovanju -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Glavni JS fajl -->
+    <script src="script.js"></script>
+</body>
+</html>
